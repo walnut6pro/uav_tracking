@@ -1,0 +1,36 @@
+<launch>
+
+  <!-- <arg name="map" default="$(find f1tenth_simulator)/maps/map215.yaml"/>
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map)"/>
+
+
+<include file="$(find tianracer_navigation)/launch/includes/tianbot_amcl.launch.xml">
+      <arg name="init_x" value="0"/>
+      <arg name="init_y" value="0"/>
+      <arg name="init_a" value="0"/>
+      <arg name="base_frame_id" value="base_link"/>
+  </include> -->
+
+
+  <!-- path-->
+  <node pkg="tianracer_navigation" name="plan" type="plan" output="screen"/>
+
+<!-- 
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true">
+    <rosparam file="$(find tianracer_navigation)/param/teb_carlike/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find tianracer_navigation)/param/teb_carlike/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find tianracer_navigation)/param/teb_carlike/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find tianracer_navigation)/param/teb_carlike/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find tianracer_navigation)/param/teb_carlike/global_planner_params.yaml" command="load" />                    
+ 
+	     
+
+	 <param name="controller_frequency" value="1" />  
+
+
+
+
+ </node> -->
+  
+
+</launch>
